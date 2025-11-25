@@ -4,21 +4,21 @@
 @section('meta_description', 'Cerita sukses peserta Program Pemagangan Nasional.')
 
 @section('page_header')
-    <div>
-        <p class="text-xs font-semibold tracking-wide text-sky-800 uppercase mb-1">
+    <div class="space-y-3">
+        <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-cyan-700">
             Cerita Sukses Peserta
         </p>
         <h1 class="text-2xl sm:text-3xl font-semibold text-slate-900">
             {{ $story['title'] }}
         </h1>
-        <p class="mt-2 text-sm text-slate-700">
+        <p class="text-sm text-slate-700">
             {{ $story['industry'] }} • {{ $story['year'] }}
         </p>
     </div>
 @endsection
 
 @section('content')
-    <article class="prose prose-sm max-w-none">
+    <article class="prose prose-sm max-w-none rounded-3xl bg-white border border-slate-100 p-6 shadow-sm">
         <p>
             {{ $story['content'] }}
         </p>
