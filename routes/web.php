@@ -43,6 +43,12 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/statistics', [AdminStatisticSnapshotController::class, 'index'])->name('statistics.index');
 });
 
+Route::get('/dashboard', function () {
+    return auth()->check() && auth()->user()->is_admin
+        ? to_route('admin.dashboard')
+        : to_route('home');
+})->middleware(['auth'])->name('dashboard');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
