@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', $story['title'] . ' | Cerita Sukses')
 @section('meta_description', 'Cerita sukses peserta Program Pemagangan Nasional.')

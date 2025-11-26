@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', $article['title'] . ' | Berita Pemagangan')
 @section('meta_description', 'Siaran pers dan berita resmi Program Pemagangan Nasional.')

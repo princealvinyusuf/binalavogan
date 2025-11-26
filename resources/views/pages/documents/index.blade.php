@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Dokumen & Unduhan Program Pemagangan Nasional')
 @section('meta_description', 'Pusat dokumen Program Pemagangan Nasional: pedoman, SOP, regulasi, dan template kerja sama.')

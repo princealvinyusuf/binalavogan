@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Tentang Direktorat | BINALAVOGAN')
 @section('meta_description', 'Profil, tugas dan fungsi, struktur organisasi, dan dasar hukum Direktorat BINALAVOGAN di bawah Ditjen Binalavotas, Kemnaker RI.')

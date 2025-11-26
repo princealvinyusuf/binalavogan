@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Kontak & Helpdesk Program Pemagangan Nasional')
 @section('meta_description', 'Informasi kontak resmi, helpdesk, dan formulir pengaduan/pertanyaan terkait Program Pemagangan Nasional.')

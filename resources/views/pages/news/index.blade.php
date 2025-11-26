@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Berita & Siaran Pers Program Pemagangan Nasional')
 @section('meta_description', 'Ruang berita dan siaran pers resmi terkait Program Pemagangan Nasional.')

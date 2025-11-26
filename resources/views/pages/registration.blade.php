@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Pendaftaran Program Pemagangan Nasional')
 @section('meta_description', 'Informasi dan formulir pendaftaran untuk peserta dan industri penyelenggara Program Pemagangan Nasional.')

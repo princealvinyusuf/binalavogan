@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Dashboard Internal Program Pemagangan Nasional')
 @section('meta_description', 'Dashboard internal untuk pengambil kebijakan dan pengelola Program Pemagangan Nasional.')

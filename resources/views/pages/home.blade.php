@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Binalavogan | Beranda')
 @section('meta_description', 'Beranda resmi Program Pemagangan Nasional di bawah Direktorat BINALAVOGAN, Ditjen Binalavotas, Kemnaker RI.')

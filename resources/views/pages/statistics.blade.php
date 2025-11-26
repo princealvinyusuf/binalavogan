@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Statistik Program Pemagangan Nasional')
 @section('meta_description', 'Dashboard publik ringkas untuk memantau statistik Program Pemagangan Nasional: jumlah pendaftar, sebaran provinsi, sektor industri, dan capaian penempatan kerja.')

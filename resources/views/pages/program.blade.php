@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Program Pemagangan Nasional | BINALAVOGAN')
 @section('meta_description', 'Informasi lengkap tentang Program Pemagangan Nasional: tujuan, manfaat, persyaratan peserta dan perusahaan, serta integrasi dengan MagangHub.')

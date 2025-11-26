@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', $document['title'] . ' | Dokumen Pemagangan')
 @section('meta_description', 'Dokumen resmi terkait Program Pemagangan Nasional.')

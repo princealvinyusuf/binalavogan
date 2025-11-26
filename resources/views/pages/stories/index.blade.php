@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', 'Cerita Sukses Program Pemagangan Nasional')
 @section('meta_description', 'Testimoni alumni dan cerita sukses Program Pemagangan Nasional dari berbagai sektor industri.')
