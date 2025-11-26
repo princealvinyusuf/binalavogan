@@ -2,37 +2,43 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Batch;
+use App\Models\HomepageMetric;
 
 class PublicController extends Controller
 {
     public function home()
     {
-        // Placeholder data for hero, banner, and quick stats
-        $latestBatch = [
-            'name' => 'Batch Nasional 2025',
-            'period' => 'Januari - Juni 2025',
-            'status' => 'Dibuka',
-            'registration_url' => route('registration.index'),
-        ];
+        $latestBatch = Batch::where('is_featured', true)->latest()->first()
+            ?? Batch::latest()->first();
 
-        $quickStats = [
-            ['label' => 'Alumni Program', 'value' => 12540],
-            ['label' => 'Industri Mitra', 'value' => 830],
-            ['label' => 'Provinsi Terlibat', 'value' => 38],
-            ['label' => 'Job Placement Rate', 'value' => '72%'],
-        ];
+        $quickStats = HomepageMetric::orderBy('order_column')->get();
 
-        $news = [];
-        $stories = [];
+        if (! $latestBatch) {
+            $latestBatch = new Batch([
+                'name' => 'Batch Nasional 2025',
+                'period' => 'Januari - Juni 2025',
+                'status' => 'Dibuka',
+                'registration_url' => route('registration.index'),
+            ]);
+        }
+
+        if ($quickStats->isEmpty()) {
+            $quickStats = collect([
+                ['label' => 'Alumni Program', 'value' => 12540],
+                ['label' => 'Industri Mitra', 'value' => 830],
+                ['label' => 'Provinsi Terlibat', 'value' => 38],
+                ['label' => 'Job Placement Rate', 'value' => '72%'],
+            ]);
+        }
 
         $programConfig = config('program');
 
         return view('pages.home', [
             'latestBatch' => $latestBatch,
             'quickStats' => $quickStats,
-            'news' => $news,
-            'stories' => $stories,
+            'news' => collect(),
+            'stories' => collect(),
             'programContent' => $programConfig,
         ]);
     }

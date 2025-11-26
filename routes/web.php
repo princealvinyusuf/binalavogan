@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\BatchController as AdminBatchController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\HomepageMetricController as AdminHomepageMetricController;
 use App\Http\Controllers\Admin\IndustryController as AdminIndustryController;
 use App\Http\Controllers\Admin\StatisticSnapshotController as AdminStatisticSnapshotController;
 use App\Http\Controllers\ContactController;
@@ -41,6 +43,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
     Route::get('/industries', [AdminIndustryController::class, 'index'])->name('industries.index');
     Route::get('/statistics', [AdminStatisticSnapshotController::class, 'index'])->name('statistics.index');
+    Route::resource('batches', AdminBatchController::class)->except('show');
+    Route::resource('metrics', AdminHomepageMetricController::class)->except('show');
 });
 
 Route::get('/dashboard', function () {

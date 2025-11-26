@@ -24,6 +24,12 @@
                 <a href="{{ route('admin.statistics.index') }}" class="flex items-center gap-2 rounded-xl px-3 py-2 @if(request()->routeIs('admin.statistics.*')) bg-slate-800 text-white @else text-slate-300 hover:bg-slate-800 @endif">
                     Statistik Pemagangan
                 </a>
+                <a href="{{ route('admin.batches.index') }}" class="flex items-center gap-2 rounded-xl px-3 py-2 @if(request()->routeIs('admin.batches.*')) bg-slate-800 text-white @else text-slate-300 hover:bg-slate-800 @endif">
+                    Batch &amp; Hero
+                </a>
+                <a href="{{ route('admin.metrics.index') }}" class="flex items-center gap-2 rounded-xl px-3 py-2 @if(request()->routeIs('admin.metrics.*')) bg-slate-800 text-white @else text-slate-300 hover:bg-slate-800 @endif">
+                    Statistik Ringkas
+                </a>
             </nav>
             <div class="px-4 py-4 border-t border-slate-800 text-xs text-slate-500">
                 <form method="POST" action="{{ route('logout') }}">

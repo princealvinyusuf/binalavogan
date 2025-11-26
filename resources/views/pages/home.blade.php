@@ -3,6 +3,13 @@
 @section('title', 'Binalavogan | Beranda')
 @section('meta_description', 'Beranda resmi Program Pemagangan Nasional di bawah Direktorat BINALAVOGAN, Ditjen Binalavotas, Kemnaker RI.')
 
+@php
+    $batchName = $latestBatch instanceof \App\Models\Batch ? $latestBatch->name : data_get($latestBatch, 'name');
+    $batchPeriod = $latestBatch instanceof \App\Models\Batch ? $latestBatch->period : data_get($latestBatch, 'period');
+    $batchStatus = $latestBatch instanceof \App\Models\Batch ? $latestBatch->status : data_get($latestBatch, 'status');
+    $batchUrl = $latestBatch instanceof \App\Models\Batch ? $latestBatch->registration_url : data_get($latestBatch, 'registration_url', route('registration.index'));
+@endphp
+
 @section('page_header')
     <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-sky-900 via-sky-800 to-cyan-700 px-5 py-8 sm:px-8 sm:py-10 text-white">
         <div class="absolute inset-y-0 right-0 opacity-40 pointer-events-none">
@@ -32,10 +39,14 @@
                 </div>
                 <dl class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-xs sm:text-[13px]">
                     @foreach($quickStats as $stat)
+                        @php
+                            $label = is_array($stat) ? $stat['label'] : $stat->label;
+                            $value = is_array($stat) ? $stat['value'] : $stat->value;
+                        @endphp
                         <div class="rounded-xl border border-white/10 bg-white/5 px-3 py-2.5">
-                            <dt class="text-cyan-100/80">{{ $stat['label'] }}</dt>
+                            <dt class="text-cyan-100/80">{{ $label }}</dt>
                             <dd class="mt-1 text-sm font-semibold text-white">
-                                {{ $stat['value'] }}
+                                {{ $value }}
                             </dd>
                         </div>
                     @endforeach
@@ -46,20 +57,20 @@
                     <h2 class="text-sm font-semibold flex items-center justify-between">
                         <span>Batch Pemagangan Terbaru</span>
                         <span class="inline-flex items-center rounded-full bg-emerald-400/15 text-emerald-100 px-2 py-0.5 text-[11px] font-semibold border border-emerald-300/40">
-                            {{ $latestBatch['status'] ?? 'Informasi' }}
+                            {{ $batchStatus ?? 'Informasi' }}
                         </span>
                     </h2>
                     <dl class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
                         <div>
                             <dt class="text-slate-200/80">Nama Batch</dt>
                             <dd class="mt-0.5 font-semibold text-white">
-                                {{ $latestBatch['name'] ?? 'Batch Nasional' }}
+                                {{ $batchName ?? 'Batch Nasional' }}
                             </dd>
                         </div>
                         <div>
                             <dt class="text-slate-200/80">Periode</dt>
                             <dd class="mt-0.5 font-semibold text-white">
-                                {{ $latestBatch['period'] ?? '-' }}
+                                {{ $batchPeriod ?? '-' }}
                             </dd>
                         </div>
                     </dl>
@@ -67,7 +78,7 @@
                         <p class="text-slate-200/80 max-w-[70%]">
                             Pendaftaran peserta dilakukan melalui MagangHub. Industri dapat mengajukan kuota langsung di portal ini.
                         </p>
-                        <a href="{{ $latestBatch['registration_url'] ?? route('registration.index') }}"
+                        <a href="{{ $batchUrl }}"
                            class="inline-flex flex-shrink-0 items-center rounded-full border border-cyan-300/60 bg-cyan-400/10 px-3 py-1 text-[11px] font-semibold text-cyan-100 hover:bg-cyan-400/20">
                             Detail
                             <span class="ml-1" aria-hidden="true">↗</span>
@@ -167,10 +178,14 @@
         </div>
         <dl class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             @foreach($quickStats as $stat)
+                @php
+                    $label = is_array($stat) ? $stat['label'] : $stat->label;
+                    $value = is_array($stat) ? $stat['value'] : $stat->value;
+                @endphp
                 <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm">
-                    <dt class="text-xs text-slate-600">{{ $stat['label'] }}</dt>
+                    <dt class="text-xs text-slate-600">{{ $label }}</dt>
                     <dd class="mt-2 text-2xl font-semibold text-slate-900">
-                        {{ $stat['value'] }}
+                        {{ $value }}
                     </dd>
                 </div>
             @endforeach
