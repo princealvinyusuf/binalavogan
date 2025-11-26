@@ -53,8 +53,8 @@
                 @php
                     $links = [
                         ['label' => 'Beranda', 'route' => 'home'],
+                        ['label' => 'Statistik Pemagangan Nasional', 'route' => 'statistics.public'],
                         ['label' => 'Pendaftaran', 'route' => 'registration.index'],
-                        ['label' => 'Statistik', 'route' => 'statistics.public'],
                         ['label' => 'Cerita Sukses', 'route' => 'stories.index'],
                         ['label' => 'Dokumen', 'route' => 'documents.index'],
                         ['label' => 'Tentang', 'route' => 'about'],
