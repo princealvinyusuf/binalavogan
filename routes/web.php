@@ -46,7 +46,7 @@ Route::get('/dokumen', [DocumentController::class, 'index'])->name('documents.in
 Route::get('/dokumen/{slug}', [DocumentController::class, 'show'])->name('documents.show');
 
 // Contact & helpdesk
-Route::get('/kontak', [ContactController::class, 'index'])->name('contact.index');
+// Kontak dipindah ke halaman tentang, namun endpoint pengiriman tetap tersedia
 Route::post('/kontak', [ContactController::class, 'store'])->name('contact.store');
 
 // Static pages

@@ -31,7 +31,14 @@ class PublicController extends Controller
 
     public function about()
     {
-        return view('pages.about');
+        $contactInfo = [
+            'call_center' => '1500-630',
+            'email' => 'binalavogan@kemnaker.go.id',
+            'address' => 'Jl. Jenderal Gatot Subroto Kav. 51, Jakarta Selatan, Indonesia',
+            'office_hours' => 'Senin–Jumat, 08.00–16.00 WIB',
+        ];
+
+        return view('pages.about', compact('contactInfo'));
     }
 }
 

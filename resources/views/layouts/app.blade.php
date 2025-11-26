@@ -58,7 +58,6 @@
                         ['label' => 'Statistik', 'route' => 'statistics.public'],
                         ['label' => 'Cerita Sukses', 'route' => 'stories.index'],
                         ['label' => 'Dokumen', 'route' => 'documents.index'],
-                        ['label' => 'Kontak', 'route' => 'contact.index'],
                     ];
                 @endphp
                 @foreach($links as $link)
