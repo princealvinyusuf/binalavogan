@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Program Pemagangan Nasional | Beranda')
+@section('title', 'Binalavogan | Beranda')
 @section('meta_description', 'Beranda resmi Program Pemagangan Nasional di bawah Direktorat BINALAVOGAN, Ditjen Binalavotas, Kemnaker RI.')
 
 @section('page_header')

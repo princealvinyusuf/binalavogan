@@ -15,6 +15,9 @@
     <meta property="og:description" content="@yield('og_description', 'Informasi resmi Program Pemagangan Nasional Kemnaker.')">
     <meta property="og:type" content="website">
 
+    <link rel="icon" type="image/png" href="{{ asset('logo_kemnaker.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('logo_kemnaker.png') }}">
+
     {{-- Styles / Scripts --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -35,9 +38,7 @@
     <header class="bg-white/80 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-6">
             <div class="flex items-center gap-3">
-                <div class="h-11 w-11 rounded-2xl bg-gradient-to-br from-sky-900 to-cyan-600 flex items-center justify-center text-white text-xs font-semibold shadow-inner">
-                    ID
-                </div>
+                <img src="{{ asset('logo_kemnaker.png') }}" alt="Logo Kemnaker" class="h-11 w-11 rounded-2xl shadow-inner object-contain bg-white p-1">
                 <div>
                     <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.18em]">
                         Kementerian Ketenagakerjaan RI
