@@ -52,12 +52,12 @@
                 @php
                     $links = [
                         ['label' => 'Beranda', 'route' => 'home'],
-                        ['label' => 'Tentang', 'route' => 'about'],
                         ['label' => 'Program', 'route' => 'program.index'],
                         ['label' => 'Pendaftaran', 'route' => 'registration.index'],
                         ['label' => 'Statistik', 'route' => 'statistics.public'],
                         ['label' => 'Cerita Sukses', 'route' => 'stories.index'],
                         ['label' => 'Dokumen', 'route' => 'documents.index'],
+                        ['label' => 'Tentang', 'route' => 'about'],
                     ];
                 @endphp
                 @foreach($links as $link)
