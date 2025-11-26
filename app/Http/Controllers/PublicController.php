@@ -26,7 +26,15 @@ class PublicController extends Controller
         $news = [];
         $stories = [];
 
-        return view('pages.home', compact('latestBatch', 'quickStats', 'news', 'stories'));
+        $programConfig = config('program');
+
+        return view('pages.home', [
+            'latestBatch' => $latestBatch,
+            'quickStats' => $quickStats,
+            'news' => $news,
+            'stories' => $stories,
+            'programContent' => $programConfig,
+        ]);
     }
 
     public function about()

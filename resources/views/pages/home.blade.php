@@ -202,6 +202,31 @@
             </a>
         </div>
     </section>
+
+    {{-- Program Pemagangan Nasional sections moved from dedicated page --}}
+    <section id="program-pemagangan" class="mt-12 space-y-4">
+        <div class="flex items-center justify-between">
+            <div>
+                <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-cyan-700">
+                    Program Pemagangan Nasional
+                </p>
+                <h2 class="text-xl sm:text-2xl font-semibold text-slate-900">
+                    Skema pemagangan terstruktur berbasis industri
+                </h2>
+            </div>
+            <a href="{{ route('program.index') }}" class="hidden sm:inline-flex items-center text-xs font-semibold text-sky-900">
+                Lihat detail halaman program
+                <span class="ml-2" aria-hidden="true">↗</span>
+            </a>
+        </div>
+
+        @include('pages.partials.program-sections', [
+            'participantRequirements' => $programContent['participant_requirements'],
+            'companyRequirements' => $programContent['company_requirements'],
+            'faq' => $programContent['faq'],
+            'magangHubUrl' => $programContent['maganghub_url'],
+        ])
+    </section>
 @endsection
 
 
