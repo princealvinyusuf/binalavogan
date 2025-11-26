@@ -69,14 +69,6 @@
             </nav>
 
             <div class="flex items-center gap-3">
-                <div class="inline-flex rounded-full border border-slate-200 bg-slate-50 text-xs font-semibold overflow-hidden" aria-label="Pengaturan bahasa">
-                    <a href="{{ route('locale.switch', ['locale' => 'id']) }}" class="px-2.5 py-1.5 @if(app()->getLocale() === 'id') bg-sky-900 text-white @else text-slate-600 hover:bg-white @endif">
-                        ID
-                    </a>
-                    <a href="{{ route('locale.switch', ['locale' => 'en']) }}" class="px-2.5 py-1.5 @if(app()->getLocale() === 'en') bg-sky-900 text-white @else text-slate-600 hover:bg-white @endif">
-                        EN
-                    </a>
-                </div>
                 @auth
                     <a href="{{ route('dashboard.internal') }}" class="hidden sm:inline-flex items-center rounded-full bg-sky-900 text-white text-xs font-semibold px-4 py-2 shadow hover:bg-sky-800">
                         Dashboard Internal
