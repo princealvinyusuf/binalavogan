@@ -214,9 +214,9 @@
                     Skema pemagangan terstruktur berbasis industri
                 </h2>
             </div>
-            <a href="{{ route('program.index') }}" class="hidden sm:inline-flex items-center text-xs font-semibold text-sky-900">
-                Lihat detail halaman program
-                <span class="ml-2" aria-hidden="true">↗</span>
+            <a href="#program-sections" class="hidden sm:inline-flex items-center text-xs font-semibold text-sky-900">
+                Telusuri detail program
+                <span class="ml-2" aria-hidden="true">↓</span>
             </a>
         </div>
 

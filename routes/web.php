@@ -22,7 +22,7 @@ use App\Http\Controllers\LocaleController;
 Route::get('/', [PublicController::class, 'home'])->name('home');
 Route::get('/tentang', [PublicController::class, 'about'])->name('about');
 
-Route::get('/program-pemagangan-nasional', [ProgramController::class, 'index'])->name('program.index');
+// Halaman program digabung ke beranda, route dihilangkan
 
 // Registration
 Route::get('/pendaftaran', [RegistrationController::class, 'index'])->name('registration.index');

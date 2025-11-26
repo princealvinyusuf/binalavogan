@@ -52,7 +52,6 @@
                 @php
                     $links = [
                         ['label' => 'Beranda', 'route' => 'home'],
-                        ['label' => 'Program', 'route' => 'program.index'],
                         ['label' => 'Pendaftaran', 'route' => 'registration.index'],
                         ['label' => 'Statistik', 'route' => 'statistics.public'],
                         ['label' => 'Cerita Sukses', 'route' => 'stories.index'],
