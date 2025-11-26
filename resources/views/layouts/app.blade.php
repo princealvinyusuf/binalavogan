@@ -54,9 +54,9 @@
                     $links = [
                         ['label' => 'Beranda', 'route' => 'home'],
                         ['label' => 'Statistik Pemagangan Nasional', 'route' => 'statistics.public'],
+                        ['label' => 'Publikasi', 'route' => 'documents.index'],
                         ['label' => 'Pendaftaran', 'route' => 'registration.index'],
                         ['label' => 'Cerita Sukses', 'route' => 'stories.index'],
-                        ['label' => 'Dokumen', 'route' => 'documents.index'],
                         ['label' => 'Tentang', 'route' => 'about'],
                     ];
                 @endphp
